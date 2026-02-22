@@ -1,7 +1,7 @@
 // ─── Config — Edit these to personalize your blog ─────────────────────────────
 const BLOG_CONFIG = {
-  authorName:    "Yogendra H J",
-  authorInitials: "YH",
+  authorName:    "Mohith Srivathsa R",
+  authorInitials: "MSR",
   authorBio:     "Learning and Sharing knowledge · Cloud Computing evangelist · AWS SAPro · Azure Admin · Exploring DevOps",
 };
 
