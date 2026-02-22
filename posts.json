@@ -1,0 +1,29 @@
+[
+  {
+    "id": "aws-service-catalog",
+    "title": "AWS Service Catalog: Restrict and Standardize Your Cloud Resources",
+    "subtitle": "Are you looking for an AWS service to restrict users to only specific services?",
+    "tag": "AWS",
+    "date": "2024-09-02",
+    "author": "You",
+    "body": "## What is AWS Service Catalog?\n\nAWS Service Catalog allows organizations to create and manage catalogs of IT services that are approved for use on AWS. These IT services can include everything from virtual machine images, servers, software, and databases to complete multi-tier application architectures.\n\n## Why Use Service Catalog?\n\nOrganizations often struggle with governance and compliance when multiple teams deploy AWS resources independently. Without standardization, you end up with inconsistent configurations, security vulnerabilities from misconfigured resources, and cost overruns from untracked deployments.\n\n## Key Features\n\nService Catalog provides centralized management of your cloud portfolio. It integrates seamlessly with IAM, CloudFormation, and AWS Organizations, making it the ideal tool for enterprises managing hundreds of accounts.\n\n## Getting Started\n\n1. Create a portfolio in the AWS console\n2. Add products (CloudFormation templates)\n3. Define constraints and launch roles\n4. Share with your organization via AWS Organizations\n\nThis approach ensures every team can only deploy pre-approved, pre-configured resources — dramatically reducing risk and toil."
+  },
+  {
+    "id": "aws-config-rules",
+    "title": "Understanding AWS Config Rules for Compliance Automation",
+    "subtitle": "AWS Config rules evaluate whether your AWS resources comply with common best practices.",
+    "tag": "DevOps",
+    "date": "2024-04-23",
+    "author": "You",
+    "body": "## Introduction to AWS Config\n\nAWS Config is a fully managed service that provides you with an AWS resource inventory, configuration history, and configuration change notifications to enable security and governance.\n\n## Config Rules\n\nConfig Rules represent your desired configuration settings for your AWS resources. When Config detects a rule violation, it flags the resource as noncompliant and sends an alert.\n\n### Managed Rules vs Custom Rules\n\nAWS provides over **150 managed rules** out of the box including s3-bucket-public-read-prohibited, ec2-instance-no-public-ip, iam-password-policy, and rds-storage-encrypted.\n\nCustom rules are Lambda functions you write and associate with Config for organization-specific compliance needs.\n\n## Remediation Actions\n\nThe real power comes from automatic remediation via Systems Manager Automation documents. When a resource becomes noncompliant, Config can automatically trigger remediation — creating a fully automated compliance loop with no human intervention required.\n\n## Cost Considerations\n\nConfig charges per rule evaluation per resource. Plan your rule set carefully to avoid unexpected costs in large environments with thousands of resources."
+  },
+  {
+    "id": "networking-in-aws",
+    "title": "Networking in AWS: A Complete Overview",
+    "subtitle": "Everything you need to know about VPCs, subnets, security groups, and advanced networking.",
+    "tag": "Networking",
+    "date": "2024-01-03",
+    "author": "You",
+    "body": "## VPC: Your Private Network in the Cloud\n\nA Virtual Private Cloud (VPC) is the foundational networking construct in AWS. Every resource you launch exists within a VPC, giving you complete control over your virtual networking environment.\n\n## Key Networking Concepts\n\n### Subnets\n\nSubnets segment your VPC into smaller IP ranges. Public subnets connect to an Internet Gateway for inbound traffic. Private subnets have no direct internet access and house application servers. Isolated subnets hold databases with no routing to the internet.\n\n### Route Tables\n\nEvery subnet has an associated route table that controls where network traffic is directed. A public subnet route table points 0.0.0.0/0 to an Internet Gateway, while private subnets route outbound traffic through a NAT Gateway.\n\n### Security Groups vs NACLs\n\nSecurity Groups are stateful firewalls operating at the instance level — if you allow inbound traffic, the response is automatically allowed. NACLs are stateless and operate at the subnet level. Use both for defense-in-depth.\n\n## Advanced Networking\n\n**VPC Peering** connects VPCs across accounts and regions without traversing the public internet. **Transit Gateway** provides a hub-and-spoke topology for complex multi-VPC architectures. **PrivateLink** exposes services without public internet exposure, and **Direct Connect** provides a dedicated physical connection to AWS from your data center."
+  }
+]
