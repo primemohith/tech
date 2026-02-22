@@ -25,5 +25,13 @@
     "date": "2024-01-03",
     "author": "You",
     "body": "## VPC: Your Private Network in the Cloud\n\nA Virtual Private Cloud (VPC) is the foundational networking construct in AWS. Every resource you launch exists within a VPC, giving you complete control over your virtual networking environment.\n\n## Key Networking Concepts\n\n### Subnets\n\nSubnets segment your VPC into smaller IP ranges. Public subnets connect to an Internet Gateway for inbound traffic. Private subnets have no direct internet access and house application servers. Isolated subnets hold databases with no routing to the internet.\n\n### Route Tables\n\nEvery subnet has an associated route table that controls where network traffic is directed. A public subnet route table points 0.0.0.0/0 to an Internet Gateway, while private subnets route outbound traffic through a NAT Gateway.\n\n### Security Groups vs NACLs\n\nSecurity Groups are stateful firewalls operating at the instance level — if you allow inbound traffic, the response is automatically allowed. NACLs are stateless and operate at the subnet level. Use both for defense-in-depth.\n\n## Advanced Networking\n\n**VPC Peering** connects VPCs across accounts and regions without traversing the public internet. **Transit Gateway** provides a hub-and-spoke topology for complex multi-VPC architectures. **PrivateLink** exposes services without public internet exposure, and **Direct Connect** provides a dedicated physical connection to AWS from your data center."
-  }
+  },
+  {
+    "id": "Security",
+    "title": "Security in GCP: A Complete Overview",
+    "subtitle": "Everything you need to know about SG, NACL, and advanced security.",
+    "tag": "Security",
+    "date": "2024-01-03",
+    "author": "You",
+    "body": "## In today’s hyper-connected landscape, securing your GCP environment demands a Zero Trust mindset where identity acts as the new perimeter, leveraging AI-driven insights from Security Command Center and Confidential Computing to ensure that your data remains encrypted and resilient against evolving threats at every layer of the stack"
 ]
